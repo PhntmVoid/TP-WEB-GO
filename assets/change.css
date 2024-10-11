@@ -1,0 +1,29 @@
+/* change.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+body.pair {
+    background-color: green; 
+}
+
+body.impair {
+    background-color: red; /
+}

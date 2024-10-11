@@ -1,0 +1,42 @@
+{{define "promo.html"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Nom}} - Détails</title>
+    <link rel="stylesheet" href="/assets/css/promo.css">
+</head>
+<body>
+    <section class="promo-details">
+        <h1>{{.Nom}}</h1>
+        <p><strong>Filière :</strong> {{.Filiere}}</p>
+        <p><strong>Niveau :</strong> {{.Niveau}}</p>
+        <p><strong>Nombre d'étudiants :</strong> {{.NbEtudiants}}</p>
+    </section>
+
+    <section class="etudiants">
+        <h2>Liste des Étudiants</h2>
+        <ul>
+            {{range .LsEtudiants}}
+            <li>
+                <p><strong>Nom :</strong> {{.Nom}}</p>
+                <p><strong>Prénom :</strong> {{.Prenom}}</p>
+                <p><strong>Âge :</strong> {{.Age}}</p>
+                <p><strong>Sexe :</strong>
+                    {{if eq .Sexe "M"}}
+                        <img src="/assets/male.png" alt="Masculin" class="sexe-img">
+                    {{else if eq .Sexe "F"}}
+                        <img src="/assets/female.png" alt="Féminin" class="sexe-img">
+                    {{else}}
+                        N/A
+                    {{end}}
+                </p>
+            </li>
+            {{end}}
+        </ul>
+    </section>
+</body>
+</html>
+{{end}}
+

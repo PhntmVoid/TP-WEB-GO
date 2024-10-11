@@ -1,0 +1,20 @@
+{{define "change.html"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de vues</title>
+    <link rel="stylesheet" href="/assets/css/change.css">
+</head>
+<body class="{{if .Pair}}pair{{else}}impair{{end}}">
+    <h1>
+        {{if .Pair}}
+            Le nombre de vues est pair : {{.Counter}}
+        {{else}}
+            Le nombre de vues est impair : {{.Counter}}
+        {{end}}
+    </h1>
+</body>
+</html>
+{{end}}
